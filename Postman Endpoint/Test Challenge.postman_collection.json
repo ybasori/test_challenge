@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "c43387b6-ac8e-4b76-a3db-9eec347820fb",
+		"name": "Test Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Indexing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:7000/api/indexing",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"indexing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Kurs By Date",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:7000/api/kurs/2018-11-07",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"kurs",
+						"2018-11-07"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Kurs By Start and End Date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:7000/api/kurs?startdate=2018-01-01&enddate=2018-11-07",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"kurs"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "2018-01-01"
+						},
+						{
+							"key": "enddate",
+							"value": "2018-11-07"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Kurs By Symbol",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:7000/api/kurs/USD?startdate=2018-01-01&enddate=2018-11-07",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"kurs",
+						"USD"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "2018-01-01"
+						},
+						{
+							"key": "enddate",
+							"value": "2018-11-07"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert New Kurs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"symbol\":\"USD\",\n\t\"e_rate\":{\n\t\t\"jual\":1803.5,\n\t\t\"beli\":177355\n\t},\n\t\"tt_counter\":{\n\t\t\"jual\":1803.5,\n\t\t\"beli\":177355\n\t},\n\t\"bank_notes\":{\n\t\t\"jual\":1803.5,\n\t\t\"beli\":177355\n\t},\n\t\"date\":\"2018-05-16\"\n}"
+				},
+				"url": {
+					"raw": "localhost:7000/api/kurs",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"kurs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Existing Kurs",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"symbol\":\"USD\",\n\t\"e_rate\":{\n\t\t\"jual\":1803.5,\n\t\t\"beli\":177355\n\t},\n\t\"tt_counter\":{\n\t\t\"jual\":1803.5,\n\t\t\"beli\":177355\n\t},\n\t\"bank_notes\":{\n\t\t\"jual\":1803.5,\n\t\t\"beli\":177355\n\t},\n\t\"date\":\"2018-05-16\"\n}"
+				},
+				"url": {
+					"raw": "localhost:7000/api/kurs",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"kurs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
